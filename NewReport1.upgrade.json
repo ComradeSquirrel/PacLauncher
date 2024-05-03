@@ -1,0 +1,144 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "",
+    "targetDisplayName": ".NET 8.0"
+  },
+  "analysisStartTime": "2024-05-02T18:42:37.2656241Z",
+  "analysisEndTime": "2024-05-02T18:42:39.6047548Z",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 3,
+      "incidents": 5,
+      "effort": 5
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 5,
+        "Optional": 0,
+        "Potential": 0,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 3,
+        "Project": 2
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 5,
+      "ruleInstances": [
+        {
+          "incidentId": "4b1c9be2-ab41-48f4-ae77-30899f174ad3",
+          "ruleId": "NuGet.0003",
+          "projectPath": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Package",
+            "path": "System.Buffers, 4.5.1",
+            "snippet": "System.Buffers, 4.5.1\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+          }
+        },
+        {
+          "incidentId": "c830e7c8-c2b1-4426-86e8-f39ecdde0c36",
+          "ruleId": "NuGet.0003",
+          "projectPath": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Package",
+            "path": "System.Memory, 4.5.5",
+            "snippet": "System.Memory, 4.5.5\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+          }
+        },
+        {
+          "incidentId": "277046ff-31a3-485f-922b-7d47acae0f68",
+          "ruleId": "NuGet.0003",
+          "projectPath": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "Package",
+            "path": "System.Numerics.Vectors, 4.5.0",
+            "snippet": "System.Numerics.Vectors, 4.5.0\n\nRecommendation:\n\nPackage functionality included with new framework reference"
+          }
+        },
+        {
+          "incidentId": "d8f0439c-dec5-4467-9c2c-ae52eed9aae7",
+          "ruleId": "Project.0001",
+          "projectPath": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj"
+          }
+        },
+        {
+          "incidentId": "6c3af8ff-e38d-4bc4-a5c9-69266d0c47f0",
+          "ruleId": "Project.0002",
+          "projectPath": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+          "state": "Active",
+          "location": {
+            "kind": "File",
+            "path": "C:\\Users\\DSU\\source\\repos\\Final.v2\\PacLauncherWin\\PacLauncherWin.csproj",
+            "snippet": "Current: .NETFramework,Version=v4.8\nNew: net8.0-windows"
+          }
+        }
+      ]
+    }
+  ],
+  "rules": {
+    "NuGet.0003": {
+      "id": "NuGet.0003",
+      "description": "NuGet package functionality is included with framework refrence.\n\nPackage needs to be removed.",
+      "label": "NuGet package functionality is included with framework refrence",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262609"
+        }
+      ]
+    },
+    "Project.0001": {
+      "id": "Project.0001",
+      "description": "Project file needs to be converted to SDK style. Modern .NET framework projects require a change in the project file format and use SDK corresponding to project flavor and functionality.",
+      "label": "Project file needs to be converted to SDK style",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227"
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226"
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to correspinding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in moderrn .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227"
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226"
+        }
+      ]
+    }
+  }
+}
